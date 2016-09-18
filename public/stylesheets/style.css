@@ -5,3 +5,38 @@ body {
 a {
   color: #00B7FF;
 }
+.col-centered {
+  float: none;
+  margin: 0 auto;
+}
+#overlay {
+  width: 200px;
+  height: 200px;
+  background: rgba(255,255,255,.8);
+  opacity: 0;
+  -webkit-transition: opactiy .25s ease;
+}
+#iphone-7 {
+  width: 200px;
+  height: 200px;
+  background: url('/images/iphone-7.jpg');
+  background-size: cover;
+  overflow: hidden;
+}
+#iphone-7:hover #overlay {
+  opacity: 1;
+}
+#iphone-7s {
+  width: 200px;
+  height: 200px;
+  background: url('/images/iphone-7s.jpg');
+  background-size: cover;
+  overflow: hidden;
+}
+#iphone-7s:hover #overlay {
+  opacity: 1;
+}
+#upgrade {
+  font-weight: 900;
+  font-size: 96px;
+}

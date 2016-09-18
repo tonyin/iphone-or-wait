@@ -1,0 +1,30 @@
+extends layout
+
+block content
+  div.container
+    div.row
+      div(class='col-md-12')
+        h1= 'Q: Should you upgrade to iPhone 7 or wait?'
+        if votesUpgrade > votesWait
+          h1= 'A: You should upgrade.'
+        else if votesWait > votesUpgrade
+          h1= 'A: You should wait.'
+        else
+          h1= 'A: Stand by..'
+    div.row
+      hr
+    div.row
+      div(class='col-md-6 text-center')
+        h2(id='votes-upgrade')= votesUpgrade
+        #iphone-7(class='col-centered')
+          #overlay
+            a(href='#', onclick='return voteUpgrade();')
+              span(id='upgrade', class='glyphicon glyphicon-circle-arrow-up', aria-hidden='true')
+        h2= 'iPhone 7'
+      div(class='col-md-6 text-center')
+        h2(id='votes-wait')= votesWait
+        #iphone-7s(class='col-centered')
+          #overlay
+            a(href='#', onclick='return voteWait();')
+              span(id='upgrade', class='glyphicon glyphicon-circle-arrow-up', aria-hidden='true')
+        h2= 'iPhone 7s'
