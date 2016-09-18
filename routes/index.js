@@ -3,13 +3,19 @@ var router = express.Router();
 
 
 /* GET home page. */
-router.get('/', (req, res, next) => {
+router.get('/', (req, res) => {
+  res.render('index', {
+    title: 'iPhone or Wait?'
+  });
+});
+
+/* GET votes */
+router.get('/votes', (req, res) => {
   var db = req.db;
   var coll = db.get('votes');
   coll.count({vote: 'upgrade'}).then((votesUpgrade) => {
     coll.count({vote: 'wait'}).then((votesWait) => {
-      res.render('index', {
-        title: 'iPhone or Wait?',
+      res.send({
         votesUpgrade: votesUpgrade,
         votesWait: votesWait
       });
