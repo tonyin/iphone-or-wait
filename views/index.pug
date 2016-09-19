@@ -8,7 +8,6 @@ block content
         h1= 'A: People think you should '
           span(id='verdict')
         br
-        br
     div.row
       div(class='col-md-12')
         h3(id='your-vote')
@@ -25,7 +24,7 @@ block content
       div(class='col-md-6 text-center')
         h2(id='votes-wait')
         #iphone-8(class='col-centered')
-          a(href='#', onclick='return voteWait();')
+          a(href='', onclick='return voteWait();')
             .overlay
               span(class='glyphicon glyphicon-circle-arrow-up vote', aria-hidden='true')
         h2= 'Wait for iPhone 8'

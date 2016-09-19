@@ -34,7 +34,7 @@ function checkVoted() {
     });
     yourVote.innerHTML = 'You voted to ' + voted + '.';
   } else {
-    yourVote.innerHTML = 'You have not yet voted.';
+    yourVote.innerHTML = 'You have not yet voted. Think carefully and click on one.';
   };
 };
 function setVoted(gen, vote) {
