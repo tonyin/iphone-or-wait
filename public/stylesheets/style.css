@@ -9,7 +9,7 @@ a {
   float: none;
   margin: 0 auto;
 }
-#overlay {
+.overlay {
   width: 200px;
   height: 200px;
   background: rgba(255,255,255,.8);
@@ -23,7 +23,7 @@ a {
   background-size: cover;
   overflow: hidden;
 }
-#iphone-7:hover #overlay {
+#iphone-7:hover .overlay {
   opacity: 1;
 }
 #iphone-7s {
@@ -33,10 +33,16 @@ a {
   background-size: cover;
   overflow: hidden;
 }
-#iphone-7s:hover #overlay {
+#iphone-7s:hover .overlay {
   opacity: 1;
 }
-#upgrade {
+.vote {
   font-weight: 900;
   font-size: 96px;
+}
+#verdict {
+  font-weight: 900;
+}
+#your-vote {
+  color: rgba(160,160,160,1);
 }

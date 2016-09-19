@@ -5,7 +5,12 @@ block content
     div.row
       div(class='col-md-12')
         h1= 'Q: Should you upgrade to iPhone 7 or wait?'
-        h1(id='verdict')
+        h1= 'A: People think you should '
+          span(id='verdict')
+        hr
+    div.row
+      div(class='col-md-12')
+        h3(id='your-vote')
     div.row
       hr
     div.row
@@ -13,13 +18,13 @@ block content
         h2(id='votes-upgrade')
         #iphone-7(class='col-centered')
           a(href='#', onclick='return voteUpgrade();')
-            #overlay
-              span(id='upgrade', class='glyphicon glyphicon-circle-arrow-up', aria-hidden='true')
-        h2= 'iPhone 7'
+            .overlay
+              span(class='glyphicon glyphicon-circle-arrow-up vote', aria-hidden='true')
+        h2= 'Upgrade to iPhone 7'
       div(class='col-md-6 text-center')
         h2(id='votes-wait')
         #iphone-7s(class='col-centered')
           a(href='#', onclick='return voteWait();')
-            #overlay
-              span(id='upgrade', class='glyphicon glyphicon-circle-arrow-up', aria-hidden='true')
-        h2= 'iPhone 7s'
+            .overlay
+              span(class='glyphicon glyphicon-circle-arrow-up vote', aria-hidden='true')
+        h2= 'Wait for iPhone 7s'
