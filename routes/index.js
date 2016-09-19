@@ -24,23 +24,26 @@ router.get('/votes', (req, res) => {
 });
 
 /* POST votes */
+router.post('/vote/upgrade', function (req, res) {
+  console.log(req);
+  var db = req.db;
+  db.collection('votes')
+    .insert({
+      gen: 'iphone7',
+      vote: 'upgrade',
+      timestamp: Date.now()
+    });
+  res.send('ok');
+});
 router.post('/vote/wait', function (req, res) {
   var db = req.db;
   db.collection('votes')
     .insert({
-      gen: "iphone7",
-      vote: "wait"
+      gen: 'iphone7',
+      vote: 'wait',
+      timestamp: Date.now()
     });
-    res.send('complete');
-});
-router.post('/vote/upgrade', function (req, res) {
-  var db = req.db;
-  db.collection('votes')
-    .insert({
-      gen: "iphone7",
-      vote: "upgrade"
-    });
-  res.send('complete');
+    res.send('ok');
 });
 
 module.exports = router;

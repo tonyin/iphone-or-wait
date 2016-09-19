@@ -45,20 +45,14 @@ function setVoted(gen, vote) {
 
 /* API */
 function voteUpgrade () {
-  $.post('/vote/upgrade',
-    {
-      gen: 'iphone7',
-      vote: 'upgrade',
-      timestamp: Date.now()
-    },
-    setVoted('iphone7', 'upgrade'));
+  var voted = Cookies.get('iphone7');
+  if (voted == null) {
+    $.post('/vote/upgrade', setVoted('iphone7', 'upgrade'));
+  };
 };
 function voteWait () {
-  $.post('/vote/wait',
-    {
-      gen: 'iphone7',
-      vote: 'wait',
-      timestamp: Date.now()
-    },
-    setVoted('iphone7', 'wait'));
+  var voted = Cookies.get('iphone7');
+  if (voted == null) {
+    $.post('/vote/wait', setVoted('iphone7', 'wait'));
+  };
 };
