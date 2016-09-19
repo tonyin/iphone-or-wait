@@ -2,12 +2,13 @@ extends layout
 
 block content
   div.container
-    div.row
+    div.row(class='bg-gray')
       div(class='col-md-12')
         h1= 'Q: Should you upgrade to iPhone 7 or wait?'
         h1= 'A: People think you should '
           span(id='verdict')
-        hr
+        br
+        br
     div.row
       div(class='col-md-12')
         h3(id='your-vote')
@@ -23,8 +24,118 @@ block content
         h2= 'Upgrade to iPhone 7'
       div(class='col-md-6 text-center')
         h2(id='votes-wait')
-        #iphone-7s(class='col-centered')
+        #iphone-8(class='col-centered')
           a(href='#', onclick='return voteWait();')
             .overlay
               span(class='glyphicon glyphicon-circle-arrow-up vote', aria-hidden='true')
-        h2= 'Wait for iPhone 7s'
+        h2= 'Wait for iPhone 8'
+    div.row
+      br
+      br
+    div.row
+      div(class='col-md-12')
+        table(class='table')
+          thead
+            tr
+              th Specifications
+              th Speculations
+          tbody
+            tr
+              td $649 (+$769)
+              td $749 (+$869)
+            tr
+              td 4.7" (+5.5") LED Backlit
+              td 5.5" (+5.8") OLED Dual Curve
+            tr
+              td Black, Jet Black
+              td Glass
+            tr
+              td Wireless AirPods
+              td Wireless AirPods
+            tr
+              td IP67 Dust and Water Resistance
+              td IP78 Dust and Water Proof
+            tr
+              td Haptic Home Button, Touch ID
+              td Glass-Embedded
+            tr
+              td A10 Fusion Chip
+              td A11 (10 nm) Chip
+            tr
+              td Wired Charging
+              td Long-Range Wireless Charging
+        br
+    div.row(class='bg-gray')
+      div(class='col-md-12 text-center')
+        h1= 'Where To Buy?'
+        br
+    div.row
+      div(class='col-md-12')
+        br
+        table(class='table')
+          thead
+            tr
+              td
+                a(href='http://www.apple.com/shop/iphone/iphone-upgrade-program')
+                  img(src='/images/apple.png', width=100, height=100)
+              td
+                a(href='https://www.att.com/cellphones/iphone/iphone-7.html')
+                  img(src='/images/att.png', width=100, height=100)
+              td
+                a(href='https://www.sprint.com/landings/iphone-forever/index_p.html')
+                  img(src='/images/sprint.png', width=100, height=100)
+              td
+                a(href='http://www.t-mobile.com/offer/apple-iphone-deals.html')
+                  img(src='/images/tmobile.png', width=100, height=100)
+              td
+                a(href='https://www.verizonwireless.com/smartphones/apple-iphone-7')
+                  img(src='/images/verizon.png', width=100, height=100)
+            tr
+              th(class='col-md-2 text-center') Apple iPhone Upgrade
+              th(class='col-md-2 text-center') AT&amp;T Next / Next Every Year
+              th(class='col-md-2 text-center') Sprint Forever
+              th(class='col-md-2 text-center') T-Mobile One
+              th(class='col-md-2 text-center') Verizon
+          tbody
+            tr
+              td(class='col-md-2 text-center') $32.41 per month
+              td(class='col-md-2 text-center')
+                | $27.09 per month
+                br
+                | $21.67 per month
+              td(class='col-md-2 text-center') $26.39 per month
+              td(class='col-md-2 text-center') $27.09 per month
+              td(class='col-md-2 text-center') $27.08 per month
+            tr
+              td(class='col-md-2 text-center') 24 months
+              td(class='col-md-2 text-center')
+                | 24 months
+                br
+                | 30 months
+              td(class='col-md-2 text-center') 18 months (then buyout)
+              td(class='col-md-2 text-center') 24 months
+              td(class='col-md-2 text-center') 24 months
+            tr
+              td(class='col-md-2 text-center')
+              td(class='col-md-2 text-center')
+                | Trade-In for $650 in Monthly Bill Credit:
+                br
+                | iPhone 6, 6+, 6s, 6s+; Galaxy S7, S7e
+              td(class='col-md-2 text-center')
+                | Trade-In for $650 in Monthly Bill Credit:
+                br
+                | iPhone 6, 6+, 6s, 6s+; Galaxy S7, S7e
+              td(class='col-md-2 text-center')
+                | Trade-In for $650 in Monthly Bill Credit:
+                br
+                | iPhone 6, 6+, 6s, 6s+
+              td(class='col-md-2 text-center')
+                | Trade-In for $650 in Monthly Bill Credit:
+                br
+                | iPhone 6, 6+, 6s, 6s+
+            tr
+              td(class='col-md-2 text-center') Upgrade: 50% paid
+              td(class='col-md-2 text-center') Upgrade: 80% paid, 50% paid
+              td(class='col-md-2 text-center') Upgrade: 50% paid
+              td(class='col-md-2 text-center') Upgrade: 50% and 30 days
+              td(class='col-md-2 text-center') Upgrade: N/A
